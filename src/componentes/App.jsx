@@ -1,17 +1,28 @@
-import Header from "../feedback/Header";
-import feedbackItem from "../feedback/FeedbackItem";
+import Header from "./feedback/Header"
+import FeedbackItem from "./feedback/FeedbackItem"
 
 function App(){
-    const HeaderStyles={
-        backgorundColor: '#ed51a3',
+
+    const headerStyles = {
+        backgroundColor: '#ed51a3',
         color: 'red'
     }
-    return (
+
+    return(
         <div className="container">
-            {/* props para ingresar a componente*/ }
-            <Header color={HeaderStyles.backgorundColor.bgColor}  />
+            {/* Props para ingresar informacion al componente */}
+            <Header 
+                bgColor={headerStyles.backgroundColor} 
+                c = "red"
+            />
+
+            <FeedbackItem />
+            <FeedbackItem />
+            <FeedbackItem />
+            <FeedbackItem />
+            
         </div>
     )
 }
 
-export default App;
+export default App
